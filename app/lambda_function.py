@@ -14,7 +14,6 @@ from .seeds import seed_commands
 from .config import Config
 
 import awsgi
-from awsgi import Response
 
 app = Flask(__name__)
 
