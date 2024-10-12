@@ -14,7 +14,7 @@ from .seeds import seed_commands
 from .config import Config
 
 import awsgi
-from awsgi import Response
+from awsgi import response
 
 app = Flask(__name__)
 
@@ -74,5 +74,5 @@ def react_root(path):
         return app.send_static_file('favicon.ico')
     return app.send_static_file('index.html')
 
-def lambda_handler(event, context):
+def Lambda_handler(event, context):
     return awsgi.response(app, event, context, base64_content_types={"image/png"})
